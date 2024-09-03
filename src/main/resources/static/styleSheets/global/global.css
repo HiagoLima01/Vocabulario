@@ -1,0 +1,25 @@
+ul,
+article,
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    font-style: none;
+}
+
+ul {
+    list-style: none;
+}
+
+html  {
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,27 @@
+.footer-bg {
+    background-color: #4477CF;
+    margin-top: auto;
+}
+
+.footer {
+    display:grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    max-height: 100%;   
+}
+
+.img_footer {
+    place-self: end;
+}
+
+.img_footer img {
+    width: 60px;
+    height: 90px;
+    display: block;
+}
+
+.linkFooter {
+    width: fit-content;
+}

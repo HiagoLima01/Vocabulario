@@ -1,0 +1,39 @@
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-form{
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    max-width: 660px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    font-size: 24px;
+    text-align: center;
+    border-radius: 5px;
+    border-style: none;
+    height: 60px;
+    width: 220px;
+    padding: 10px;
+    margin-top: 30px;
+    display: block;
+    background-color: #77B35B;
+    cursor: pointer;
+    place-self: end;
+    color: white;
+}
+
+
+.btn:hover {
+    background-color: #8bcf6b;
+}
+
