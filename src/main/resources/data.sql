@@ -1,0 +1,1 @@
+INSERT INTO tb_palavra(fonte_palavra , palavra) VALUES ('Oxford','Hiago Lima');

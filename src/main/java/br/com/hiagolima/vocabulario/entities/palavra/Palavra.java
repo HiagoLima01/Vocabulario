@@ -1,9 +1,18 @@
-package br.com.hiagolima.dicionarioComunitario.entities;
+package br.com.hiagolima.vocabulario.entities.palavra;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.hiagolima.vocabulario.entities.significado.Significado;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -21,7 +30,7 @@ import lombok.NoArgsConstructor;
  */
 
 @Table(name = "tb_palavra")
-@Entity(name = "palabra")
+@Entity(name = "palavra")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -32,28 +41,28 @@ public class Palavra {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String palavra;
-	private String significado;
-	private String nome;
 	private String fontePalavra;
+	
+	@OneToMany(mappedBy = "palavra", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private List<Significado> significados;
+	
+//	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//	@JoinTable(name = "tb_palavra_significado",
+//	joinColumns = {
+//		@JoinColumn(name = "palavra_id", referencedColumnName = "id")	
+//	})
+//	private List<Significado> significados;
 	
 	public Palavra() {}
 	
 	public Palavra(PalavraRequestDTO data) {
-		this.palavra = data.palavra();
-		this.significado = data.significado();
-		this.nome = data.nome();
-		this.fontePalavra = data.fontePalavra();
+		this.palavra = data.getPalavra();
+		this.fontePalavra = data.getFontePalavra();
 	}
 	
 	
 	public String getPalavra() {
 		return palavra;
-	}
-	public String getSignificado() {
-		return significado;
-	}
-	public String getNome() {
-		return nome;
 	}
 	public String getFontePalavra() {
 		return fontePalavra;
@@ -61,5 +70,14 @@ public class Palavra {
 	
 	public long getId() {
 		return id;
+	}
+	
+	public void setPalavra(String palavra) {
+		this.palavra = palavra;
+	}
+	
+	@Override
+	public String toString(){
+		return " id: " + id + "palavra: " + palavra + "Fonte Palavra: " + fontePalavra;
 	}
 }

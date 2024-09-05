@@ -1,4 +1,9 @@
-package br.com.hiagolima.dicionarioComunitario.entities;
+package br.com.hiagolima.vocabulario.entities.palavra;
+
+import java.util.List;
+
+import br.com.hiagolima.vocabulario.entities.significado.Significado;
+import br.com.hiagolima.vocabulario.entities.significado.SignificadoRequestDTO;
 
 /*
  * Uma DTO (Data Transfer Object) é uma classe específica para transferir dados entre diferentes partes do sistema, 
@@ -13,6 +18,29 @@ package br.com.hiagolima.dicionarioComunitario.entities;
  * Neste exemplo temos uma DTO do tipo Request.
  */
 
-public record PalavraRequestDTO(String palavra, String significado, String nome, String fontePalavra) {
+public class PalavraRequestDTO {
+	
+    private String palavra;
+
+    private String fontePalavra;
+    
+	public String getPalavra() {
+		return palavra;
+	}
+
+	public void setPalavra(String palavra) {
+		this.palavra = palavra;
+	}
+	
+	public String getFontePalavra() {
+		return fontePalavra;
+	}
+	public void setFontePalavra(String fontePalavra) {
+		this.fontePalavra = fontePalavra;
+	}
+	
+	public String toString(){
+		return "palavra: " + palavra + " Fonte Palavra: " + fontePalavra;
+	}
 
 }

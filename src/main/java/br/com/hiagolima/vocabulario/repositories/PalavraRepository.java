@@ -1,7 +1,9 @@
-package br.com.hiagolima.dicionarioComunitario.repositories;
+package br.com.hiagolima.vocabulario.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import br.com.hiagolima.dicionarioComunitario.entities.Palavra;
+
+
+import br.com.hiagolima.vocabulario.entities.palavra.Palavra;
 
 /* 
  * Esta é a interface JpaRepository, que fornece uma coleção de métodos prontos para facilitar as interações entre a aplicação e o banco de dados.
@@ -12,3 +14,5 @@ import br.com.hiagolima.dicionarioComunitario.entities.Palavra;
 public interface PalavraRepository extends JpaRepository<Palavra, Long> {
 
 }
+
+

@@ -13,9 +13,13 @@
 }
 
 .header ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+	display: flex;
+	 flex-wrap: wrap;
+	 justify-content: space-between;
+	 align-items: center;
+	 gap: 20px;
+	 padding: 20px;
+	 height: 100%;
 }
 
 .header li a{

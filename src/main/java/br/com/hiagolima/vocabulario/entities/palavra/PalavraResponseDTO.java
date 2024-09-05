@@ -1,6 +1,4 @@
-package br.com.hiagolima.dicionarioComunitario.entities;
-
-import br.com.hiagolima.dicionarioComunitario.entities.Palavra;
+package br.com.hiagolima.vocabulario.entities.palavra;
 
 /* Uma DTO (Data Transfer Object) é uma classe específica para transferir dados entre diferentes partes do sistema, 
  * como entre camadas de uma aplicação. Neste caso, usamos um record, que é uma classe imutável introduzida no Java 14,
@@ -14,9 +12,9 @@ import br.com.hiagolima.dicionarioComunitario.entities.Palavra;
  * Neste exemplo temos uma DTO do tipo Response.
  */
 
-public record PalavraResponseDTO(Long id, String palavra, String significado, String nome, String fontePalavra) {
+public record PalavraResponseDTO(Long id, String palavra, String fontePalavra) {
 
 	public PalavraResponseDTO(Palavra palavra) {
-		this(palavra.getId(), palavra.getPalavra(), palavra.getSignificado(), palavra.getNome(), palavra.getFontePalavra());
+		this(palavra.getId(), palavra.getPalavra(), palavra.getFontePalavra());
 	}
 }
