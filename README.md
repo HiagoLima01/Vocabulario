@@ -1,6 +1,6 @@
 # Vocabulario
 
- Historia do projeto
+ ##Historia do projeto
  
  No ano passado, meu amigo Rafael Lincon, estudante de Letras na Universidade UFERSA, me pediu 
 ajuda para criar a interface de um site de dicionário comunitário. A ideia era simples: permitir que 
